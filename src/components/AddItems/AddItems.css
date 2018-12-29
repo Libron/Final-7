@@ -1,0 +1,20 @@
+.Add-items {
+    width: 65%;
+}
+
+.item {
+    width: 47%;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 5px 10px 5px 115px;
+}
+
+.food {
+    background: url("../../assets/food.png") 6% 50% no-repeat;
+    background-size: 70px;
+}
+.drink {
+    background: url("../../assets/drink.png") 6% 50% no-repeat;
+    background-size: 70px;
+}
