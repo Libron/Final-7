@@ -1,5 +1,6 @@
 .Orders {
     width: 30%;
+    box-shadow: 2px 3px 5px 1px rgba(50, 50, 50, 0.75);
 }
 .Orders ol {
     margin: 0;
@@ -20,7 +21,7 @@
     right: 40px;
 }
 .order .qty {
-    color: red;
+    color: #00695c;
     margin-right: 10px;
 
 }
@@ -38,6 +39,6 @@
 
 .total {
     margin-top: 30px;
-    padding-top: 5px;
+    padding-top: 10px;
     border-top: 1px solid grey;
 }
