@@ -1,6 +1,10 @@
-.Add-items {
+.Additems {
     width: 65%;
 }
+.Additems h1{
+    margin: 0 0 15px;
+}
+
 
 .item {
     width: 47%;
@@ -8,6 +12,7 @@
     border: 1px solid black;
     margin: 10px;
     padding: 5px 10px 5px 115px;
+    border-radius: 20px;
 }
 
 .food {
@@ -17,4 +22,8 @@
 .drink {
     background: url("../../assets/drink.png") 6% 50% no-repeat;
     background-size: 70px;
+}
+
+.item:hover {
+   background-color: #80cbc4;
 }
