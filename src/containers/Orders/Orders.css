@@ -1,0 +1,43 @@
+.Orders {
+    width: 30%;
+}
+.Orders ol {
+    margin: 0;
+    padding: 0 0 0 18px;
+}
+
+.order {
+    padding: 15px 0;
+    position: relative;
+    margin: 10px 0;
+}
+.order p {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    position: absolute;
+    top: 30%;
+    right: 40px;
+}
+.order .qty {
+    color: red;
+    margin-right: 10px;
+
+}
+.order button {
+    position: absolute;
+    top: -5px;
+    right: -35px;
+    background: url("../../assets/remove.png") 0 0 no-repeat;
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    border: none;
+    outline: none;
+}
+
+.total {
+    margin-top: 30px;
+    padding-top: 5px;
+    border-top: 1px solid grey;
+}

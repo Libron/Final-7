@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {MENU} from "../../components/AddItems/AddItems";
+import './Orders.css';
 
 class Orders extends Component {
     render() {
@@ -23,7 +24,7 @@ class Orders extends Component {
         return (
             <React.Fragment>
                 <ol>{orders}</ol>
-                <p className="total">Общая стоимость заказа: {totalCost}</p>
+                <p className="total">Общая стоимость заказа: {totalCost} сом</p>
             </React.Fragment>
         );
     }
