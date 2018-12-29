@@ -1,25 +1,50 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import AddItems from "./components/AddItems/AddItems";
+import Orders from "./containers/Orders/Orders";
 
 class App extends Component {
+    state = {
+       orders: [],
+        totalCost: 0
+    };
+
+    addOrder = name => {
+        const orders = this.state.orders;
+        const index = orders.findIndex(x => x.name===name);
+        if (index === -1) {
+            orders.push({name: name, qty: 1});
+        } else {
+            orders[index].qty++;
+        }
+        this.setState(orders);
+    };
+
+    removeOrder = index => {
+        const orders = this.state.orders;
+
+        if ( orders[index].qty > 1) {
+            orders[index].qty--;
+        } else {
+            orders.pop(index);
+        }
+        this.setState(orders);
+    };
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+          <div className="col Orders">
+              <Orders
+                  orders={this.state.orders}
+                  totalCost={this.state.totalCost}
+                  removeOrder={index => this.removeOrder(index)}
+              />
+          </div>
+          <div className="col Additems">
+              <h1>Menu</h1>
+              <AddItems addOrder={name => this.addOrder(name)} />
+          </div>
       </div>
     );
   }
